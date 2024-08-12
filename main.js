@@ -152,54 +152,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //     window.addEventListener("scroll", updateActiveLink);
 // });
 
-// animation 2
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     const sections = document.querySelectorAll(".section");
-//     const navLinks = document.querySelectorAll(".navbar a");
-
-//     function updateActiveLink() {
-//         let closestSection = null;
-//         let minDistance = Number.MAX_VALUE;
-//         const viewportCenter = window.innerHeight / 2;
-
-//         sections.forEach((section) => {
-//             const rect = section.getBoundingClientRect();
-//             const sectionCenter = rect.top + rect.height / 2;
-//             const distance = Math.abs(viewportCenter - sectionCenter);
-
-//             if (distance < minDistance) {
-//                 minDistance = distance;
-//                 closestSection = section;
-//             }
-//         });
-
-//         navLinks.forEach((link) => {
-//             link.classList.remove("active");
-//             if (
-//                 closestSection &&
-//                 link.getAttribute("href") === `#${closestSection.id}`
-//             ) {
-//                 link.classList.add("active");
-//             }
-//         });
-
-//         sections.forEach((section) => {
-//             const rect = section.getBoundingClientRect();
-//             if (rect.top < window.innerHeight && rect.bottom > 0) {
-//                 section.classList.add("visible");
-//                 section.classList.remove("hidden");
-//             } else {
-//                 section.classList.remove("visible");
-//                 section.classList.add("hidden");
-//             }
-//         });
-//     }
-
-//     updateActiveLink();
-//     window.addEventListener("hashchange", updateActiveLink);
-//     window.addEventListener("scroll", updateActiveLink);
-// });
 // animation 
 
 document.addEventListener('DOMContentLoaded', function () {
