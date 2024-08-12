@@ -200,3 +200,27 @@ document.addEventListener("DOMContentLoaded", function () {
 //     window.addEventListener("hashchange", updateActiveLink);
 //     window.addEventListener("scroll", updateActiveLink);
 // });
+// animation 
+
+document.addEventListener('DOMContentLoaded', function () {
+	const sections = document.querySelectorAll('.heading');
+
+	const options = {
+			threshold: 0.5
+	};
+
+	const observer = new IntersectionObserver(function (entries, observer) {
+			entries.forEach(entry => {
+					if (!entry.isIntersecting) {
+							return;
+					}
+					entry.target.classList.add('visible');
+					observer.unobserve(entry.target);
+			});
+	}, options);
+
+	sections.forEach(section => {
+			observer.observe(section);
+	});
+});
+
